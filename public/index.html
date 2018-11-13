@@ -3,7 +3,8 @@
 <head>
     <title>User Posts</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="javascripts/comments.js"></script>
+    <script src="javascripts/posts.js"></script> <!--I think that I did this correctly, it was comments.js-->
+    <script src="avatar.js"></script>
 
 </head>
 
@@ -21,10 +22,56 @@
     <button id="getComments">Get Comments</button>
     <button id="deleteComments">Delete All</button>
 
+
     <div id="json"></div>
     <div id="done"></div>
     <div id="comments"></div>
+    
+    
+    <div class="container">
+    <div class="jumbotron">
+      <h1>Create New User</h1>
+      
+      
 
+  <center> <!--Makes the buttons and input boxes centered-->
+    <form name='userForm' ng-submit='addNew(userForm)'>
+      <input class="form-control input-lg" placeholder='Name' ng-model='userForm.name'/>
+      <input class="form-control input-lg" placeholder='Email' ng-model='userForm.email'/>
+      <input class="form-control input-lg" placeholder='Image Url' ng-model='userForm.url'/>
+      <br>
+      <br>
+      <div class="row">
+        <div class="mx-auto"></div>
+          <button type="submit" class="btn btn-primary btn-block">Add New User</button></a>
+      </div>
+      <!--<button type='submit'>Add New</button>-->
+      <br>
+      <br>
+      </center>
+     
+    </form>
+    
+    <ul class='User-list'>
+      <!--
+        ng-repeat loops through the users array bound to the scope of mainCtrl and gives
+        us access to the user object in each index so we can reference the user properties
+      -->
+      <li ng-repeat='user in users'>
+        <br>
+        <br>
+          <avatar user='user' />
+        <!--<div class='Avatar'>-->
+        <!--  <img ng-src='{{user.avatarUrl}}' />-->
+        <!--  <h3>{{user.email}}</h3>-->
+        <!--  <h4>{{user.name}}</h4>-->
+        <!--</div>-->
+      </li>
+    </ul>
+  </div>
+</div>
+    
+  
 
 </body>
 

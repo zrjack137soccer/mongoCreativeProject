@@ -2,6 +2,7 @@
  * 1. We have added a directive with the name 'avatar' and handler of
  * avatarDirective to our angular app module
  */
+ /*global angular*/
 angular.module('app', [])
   .controller('mainCtrl', mainCtrl)
   .directive('avatar', avatarDirective);

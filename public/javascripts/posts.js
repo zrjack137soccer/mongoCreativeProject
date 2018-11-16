@@ -1,9 +1,26 @@
 $(document).ready(function() {
+    $("#deleteComments").click(function() {
+    var url = "comment";
+    $.ajax({
+      url: url,
+      type: "DELETE",
+      success: function(data, textStatus) {
+        $("#done").html(textStatus);
+      }
+    });
+  });
+    
+    
+    
+    
+    
+    
     $("#postComment").click(function() {
         var myobj = { Name: $("#name").val(), Comment: $("#comment").val() };
         jobj = JSON.stringify(myobj);
         $("#json").text(jobj);
         var url = "comment";
+
         $.ajax({
             url: url,
             type: "POST",
@@ -12,7 +29,8 @@ $(document).ready(function() {
             success: function(data, textStatus) {
                 $("#done").html(textStatus);
             }
-        });
+        })
+
     });
     
     $("#getComments").click(function() {
@@ -27,18 +45,13 @@ $(document).ready(function() {
       }
       everything += "</ul>";
       $("#comments").html(everything);
-    });
-  });
+    })
+  })
+  
 
-$("#deleteComments").click(function() {
-        var url = "comment";
-        $.ajax({
-            url: url,
-            type: "DELETE",
-            success: function(data, textStatus) {
-                $("#done").html(textStatus);
-            }
-        });
-    });
+    
+    
 });
+
+
 

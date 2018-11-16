@@ -27,7 +27,6 @@ router.post('/comment', function(req, res, next) {
         console.log(post);
         res.sendStatus(200);
     });
-    res.sendStatus(200);
 });
 
 router.get('/comment', function(req, res, next) {

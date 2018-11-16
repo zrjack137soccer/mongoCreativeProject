@@ -29,7 +29,7 @@ $(document).ready(function() {
             success: function(data, textStatus) {
                 $("#done").html(textStatus);
             }
-        })
+        });
 
     });
     
@@ -50,8 +50,8 @@ $(document).ready(function() {
       }
       everything += "</ul>";
       $("#comments").html(everything);
-    })
-  })
+    });
+  });
   
 
     

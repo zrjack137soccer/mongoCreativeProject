@@ -8,7 +8,7 @@ angular.module('app', [])
   .directive('avatar', avatarDirective);
 
 function mainCtrl ($scope) {
-
+  
   $scope.users = [];
 
   $scope.addNew = function (user) {
@@ -56,5 +56,25 @@ function avatarDirective () {
       scope.user.avatarUrl = 'https://www.drupal.org/files/issues/default-avatar.png';
     }
   }
+  
+  
+  
+  $(document).ready(function() {
+    $(".submitUser").click(function() {
+        var myobj = { Name: $("{{user.name}}"), Email: $("{{user.email}}"), Url: $("{{user.avatarUrl") };
+        jobj = JSON.stringify(myobj);
+        $("#json").text(jobj);
+        var url = "users";
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: jobj,
+            contentType: "application/json; charset=utf-8",
+            success: function(data, textStatus) {
+                $("#done").html(textStatus);
+            }
+        });
+    });
+});
 
 }

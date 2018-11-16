@@ -23,6 +23,7 @@ li {
   width: 300px;
   border-radius: 25px;
   list-style-type: none;
+  margin-top: 5px;
 }
 ul {
   background-color: aqua;
@@ -30,7 +31,6 @@ ul {
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 15px;
   width: 400px;
 }
 input[type=comment] {

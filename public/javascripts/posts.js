@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#postComment").click(function() {
-        var myobj = { Name: $("#name").val(), Comment: $("#comment").val() };
+        var myobj = { Name: $("#name").val(), Comment: $("#comment").val(), Image: $("#image").val() };
         jobj = JSON.stringify(myobj);
         $("#json").text(jobj);
         var url = "comment";
@@ -23,7 +23,12 @@ $(document).ready(function() {
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+        if(com.Image == "") {
+            everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>";
+        }
+        else {
+        everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>" + "<img \"#postPicture\" src=" + com.Image + "><br>";
+        }
       }
       everything += "</ul>";
       $("#comments").html(everything);

@@ -3,8 +3,10 @@
 <head>
     <title>User Posts</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
     <script src="javascripts/posts.js"></script> <!--I think that I did this correctly, it was comments.js-->
     <script src="javascripts/avatar.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
 
 </head>
 
@@ -12,6 +14,7 @@
     <form id="commentForm" action="">
         <label for="name">Name: </label> <input type="text" id="name" placeholder="Name"><br>
         <label for="comment">Comment: </label> <input type="text" id="comment" placeholder="Comment"><br>
+        <label for="image">Image Url: </label> <input type="text" id="image" placeholder="Image"><br>
     </form>
 
     <form id="commentForm" action="">
@@ -25,16 +28,16 @@
 
     <div id="json"></div>
     <div id="done"></div>
-    <div id="comments"></div>
+    <div id="comments"></div><br><br>
     
     
-    <div class="container">
+    <!--<div class="container">
     <div class="jumbotron">
       <h1>Create New User</h1>
       
       
 
-  <center> <!--Makes the buttons and input boxes centered-->
+  <!--<center> Makes the buttons and input boxes centered
     <form name='userForm' ng-submit='addNew(userForm)'>
       <input class="form-control input-lg" placeholder='Name' ng-model='userForm.name'/>
       <input class="form-control input-lg" placeholder='Email' ng-model='userForm.email'/>
@@ -43,9 +46,9 @@
       <br>
       <div class="row">
         <div class="mx-auto"></div>
-          <button type="submit" class="btn btn-primary btn-block">Add New User</button></a>
+          <button type="submit" class="submitUser">Add New User</button></a>
       </div>
-      <!--<button type='submit'>Add New</button>-->
+      <!--<button type='submit'>Add New</button>
       <br>
       <br>
       </center>
@@ -56,7 +59,7 @@
       <!--
         ng-repeat loops through the users array bound to the scope of mainCtrl and gives
         us access to the user object in each index so we can reference the user properties
-      -->
+      
       <li ng-repeat='user in users'>
         <br>
         <br>
@@ -65,11 +68,11 @@
         <!--  <img ng-src='{{user.avatarUrl}}' />-->
         <!--  <h3>{{user.email}}</h3>-->
         <!--  <h4>{{user.name}}</h4>-->
-        <!--</div>-->
+        <!--</div>
       </li>
     </ul>
   </div>
-</div>
+</div>!-->
     
   
 

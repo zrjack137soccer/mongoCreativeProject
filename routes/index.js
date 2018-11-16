@@ -6,7 +6,8 @@ mongoose.connect('mongodb://localhost/commentDB', { useNewUrlParser: true }); //
 
 var commentSchema = mongoose.Schema({ //Defines the Schema for this database
     Name: String,
-    Comment: String
+    Comment: String,
+    Image: String
 });
 
 var Comment = mongoose.model('Comment', commentSchema); //Makes an object from that schema as a model
@@ -27,7 +28,6 @@ router.post('/comment', function(req, res, next) {
         console.log(post);
         res.sendStatus(200);
     });
-    res.sendStatus(200);
 });
 
 router.get('/comment', function(req, res, next) {

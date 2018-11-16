@@ -6,3 +6,29 @@ body {
 a {
   color: #00B7FF;
 }
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: blue;
+}
+
+li {
+  background-color: white;
+  padding-left: 10px;
+  width: 300px;
+  border-radius: 25px;
+  list-style-type: none;
+}
+ul {
+  background-color: aqua;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 75px;
+  width: 400px;
+}

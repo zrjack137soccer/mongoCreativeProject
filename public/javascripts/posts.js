@@ -48,7 +48,7 @@ $(document).ready(function() {
             everything += "<li style=\"font-weight:bold; text-align:left\">" + com.Name + "</li><br>" + "<img \"#postPicture\" src=" + com.Image + "><br>";
         }
         else {
-        everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>" + "<img \"#postPicture\" src=" + com.Image + "><br><br><br><br>";
+        everything += "<li style=\"font-weight:bold; text-align:left\">" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>" + "<img \"#postPicture\" src=" + com.Image + "><br><br><br><br>";
         }
       }
       everything += "</ul>";

@@ -14,7 +14,7 @@ img {
   border-radius: 25px;
   border-width: 2px;
   border-style: solid;
-  border-color: blue;
+  border-color: #c5d5c5;
 }
 
 li {
@@ -25,7 +25,7 @@ li {
   list-style-type: none;
 }
 ul {
-  background-color: aqua;
+  background-color: #c5d5c5;
   border-radius: 25px;
   margin-top: 20px;
   padding-top: 20px;

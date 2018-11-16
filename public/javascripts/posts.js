@@ -42,10 +42,10 @@ $(document).ready(function() {
       for(var comment in data) {
         com = data[comment];
         if(com.Image == "") {
-            everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>";
+            everything += "<li>" + com.Name + "</li><br><br>" + "<li>" + com.Comment + "</li>" + "<br>";
         }
         else {
-        everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>" + "<img \"#postPicture\" src=" + com.Image + "><br>";
+        everything += "<li>" + com.Name + "</li>" + "<li>" + com.Comment + "</li>" + "<br>" + "<img \"#postPicture\" src=" + com.Image + "><br><br><br><br>";
         }
       }
       everything += "</ul>";
